@@ -53,14 +53,12 @@ h2 {
 .logout-btn:hover {
   background-color: #841515 !important;
 }
-
-/* Responsive grid for cards */
 .entry-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   width: 100%;
-  max-width: 960px; /* Same as nav for alignment */
+  max-width: 960px; 
   box-sizing: border-box;
 }
 
@@ -76,8 +74,6 @@ h2 {
   margin: 8px 0;
   font-size: 16px;
 }
-
-/* Ensure responsiveness */
 @media (max-width: 600px) {
   .guest-nav {
     flex-direction: column;

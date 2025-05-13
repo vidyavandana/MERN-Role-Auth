@@ -1,11 +1,9 @@
-/* Wrapper Container */
 html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
-
 .admin-wrapper {
   display: flex;
   flex-direction: column;
@@ -15,10 +13,8 @@ html, body, #root {
   background-color: #060809;
   padding: 20px;
   box-sizing: border-box;
-  overflow-y: auto; /* Allow vertical scroll */
+  overflow-y: auto; 
 }
-
-/* Main Container */
 .admin-container {
   width: 100%;
   max-width: 960px;
@@ -33,16 +29,12 @@ html, body, #root {
   margin-bottom: 30px;
   flex-grow: 1; 
 }
-
-/* Header */
 h2 {
   text-align: center;
   font-size: 32px;
   margin-bottom: 30px;
    animation: slideIn 1s ease-out;
 }
-
-/* Form */
 .admin-form {
   display: flex;
   flex-wrap: wrap;
@@ -74,8 +66,6 @@ h2 {
 .admin-form button:hover {
   background-color: #155d84;
 }
-
-/* Data List */
 .data-list {
   display: grid;
   gap: 20px;
@@ -118,15 +108,11 @@ h2 {
   background-color: #ff4d4d;
   color: white;
 }
-
-/* Empty message styling */
 .empty-msg {
   text-align: center;
   font-style: italic;
   color: gray;
 }
-
-/* Logout Button Styling */
 .logout-btn {
   background-color: #1fbea4 !important; 
   color: white;
@@ -146,9 +132,6 @@ h2 {
 .logout-btn:hover {
   background-color: #841515 !important; 
 }
-
-
-/* Responsive: Optional */
 @media (max-width: 600px) {
   .admin-form input {
     flex: 1 1 100%;

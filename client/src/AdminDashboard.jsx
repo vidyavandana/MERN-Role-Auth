@@ -16,7 +16,6 @@ const AdminDashboard = () => {
 
     try {
       if (editIndex !== null) {
-        // Update existing record in MongoDB
         const id = dataList[editIndex]._id;
         const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/forms/${id}`, formData);
 
@@ -24,13 +23,12 @@ const AdminDashboard = () => {
         updatedList[editIndex] = response.data;
         setDataList(updatedList);
       } else {
-        // Add new record
         const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/forms`, formData);
 
         setDataList([...dataList, response.data]);
       }
 
-      // Clear form
+  
       setFormData({ name: "", address: "", pin: "", phone: "" });
       setEditIndex(null);
     } catch (error) {
@@ -72,7 +70,7 @@ const AdminDashboard = () => {
 
   const handleLogout = () => {
     localStorage.clear();
-    window.location.href = "/"; // Redirect to home or login page
+    window.location.href = "/"; 
   };
 
   return (
@@ -106,8 +104,6 @@ const AdminDashboard = () => {
             ))
           )}
         </div>
-
-        {/* Logout button outside of the data-list */}
         <button className="logout-btn" onClick={handleLogout}>Logout</button>
       </div>
     </div>

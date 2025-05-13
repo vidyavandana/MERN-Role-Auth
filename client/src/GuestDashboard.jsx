@@ -29,7 +29,6 @@ const GuestDashboard = () => {
     <div className="guest-container">
         <h2>Welcome Guest 👋</h2>
 
-      {/* Display data entries or a message if there are no entries */}
       <div className="entry-list">
         {entries.length === 0 ? (
           <p>No data available</p>
@@ -44,8 +43,6 @@ const GuestDashboard = () => {
           ))
         )}
       </div>
-
-      {/* Logout button, styled and aligned at the bottom */}
       <button className="logout-btn" onClick={handleLogout}>Logout</button>
     </div>
     </div>
