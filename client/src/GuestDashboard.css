@@ -1,0 +1,93 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.guest-wrapper {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #060809;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; 
+}
+
+.guest-container {
+  width: 100%;
+  max-width: 960px;
+  font-family: 'Poppins', sans-serif;
+  color: #214159;
+  background-color: white;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  flex-grow: 1; 
+}
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+   animation: slideIn 1s ease-out;
+}
+.logout-btn {
+  background-color:#1fbea4 !important; 
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: auto; 
+  align-self: center; 
+}
+
+.logout-btn:hover {
+  background-color: #841515 !important;
+}
+
+/* Responsive grid for cards */
+.entry-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 960px; /* Same as nav for alignment */
+  box-sizing: border-box;
+}
+
+.entry-card {
+  background: rgb(67, 149, 194);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(106, 101, 101, 0.1);
+  border-left: 5px solid #115a82;
+}
+
+.entry-card p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 600px) {
+  .guest-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .entry-list {
+    padding-top: 20px;
+  }
+}
+@keyframes slideIn {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}

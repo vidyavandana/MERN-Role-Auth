@@ -1,0 +1,164 @@
+/* Wrapper Container */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.admin-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #060809;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow vertical scroll */
+}
+
+/* Main Container */
+.admin-container {
+  width: 100%;
+  max-width: 960px;
+  font-family: 'Poppins', sans-serif;
+  color: #214159;
+  background-color: white;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  flex-grow: 1; 
+}
+
+/* Header */
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+   animation: slideIn 1s ease-out;
+}
+
+/* Form */
+.admin-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.admin-form input {
+  flex: 1 1 45%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.admin-form button {
+  flex: 1 1 100%;
+  padding: 12px;
+  background-color:  #1fbea4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-form button:hover {
+  background-color: #155d84;
+}
+
+/* Data List */
+.data-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+}
+
+.data-card {
+  background-color: #f5faff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.data-card p {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.action-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.action-btns button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.action-btns button:first-child {
+  background-color: #ffd700;
+}
+
+.action-btns button:last-child {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+/* Empty message styling */
+.empty-msg {
+  text-align: center;
+  font-style: italic;
+  color: gray;
+}
+
+/* Logout Button Styling */
+.logout-btn {
+  background-color: #1fbea4 !important; 
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: 30px;
+  align-self: center; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logout-btn:hover {
+  background-color: #841515 !important; 
+}
+
+
+/* Responsive: Optional */
+@media (max-width: 600px) {
+  .admin-form input {
+    flex: 1 1 100%;
+  }
+
+  .admin-form button {
+    font-size: 16px;
+  }
+}
+@keyframes slideIn {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
