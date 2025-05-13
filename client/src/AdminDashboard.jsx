@@ -18,7 +18,7 @@ const AdminDashboard = () => {
       if (editIndex !== null) {
         // Update existing record in MongoDB
         const id = dataList[editIndex]._id;
-        const response = await axios.put(`${import.meta.env.VITE_API_URL}/forms/${id}`, formData);
+        const response = await axios.put(`${import.meta.env.VITE_API_URL}/api/forms/${id}`, formData);
 
         const updatedList = [...dataList];
         updatedList[editIndex] = response.data;
