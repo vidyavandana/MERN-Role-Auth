@@ -25,7 +25,8 @@ const AdminDashboard = () => {
         setDataList(updatedList);
       } else {
         // Add new record
-        const response = await axios.post("http://localhost:5000/api/forms", formData);
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/forms`, formData);
+
         setDataList([...dataList, response.data]);
       }
 
@@ -40,7 +41,8 @@ const AdminDashboard = () => {
   const handleDelete = async (index) => {
     try {
       const id = dataList[index]._id;
-      await axios.delete(`http://localhost:5000/api/forms/${id}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/api/forms/${id}`);
+
       const updated = [...dataList];
       updated.splice(index, 1);
       setDataList(updated);
@@ -52,7 +54,8 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/forms");
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/forms`);
+
         setDataList(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

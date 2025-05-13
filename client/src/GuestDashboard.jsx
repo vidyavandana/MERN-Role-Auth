@@ -11,7 +11,8 @@ const GuestDashboard = () => {
 
   const fetchEntries = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/forms");
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/forms`);
+
       setEntries(response.data);
     } catch (error) {
       console.error("Failed to fetch entries", error);
